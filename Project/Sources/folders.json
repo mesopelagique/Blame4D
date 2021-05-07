@@ -1,0 +1,8 @@
+{
+	"test": {
+		"methods": [
+			"test_blame"
+		]
+	},
+	"trash": {}
+}
