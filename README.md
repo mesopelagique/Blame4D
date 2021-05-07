@@ -33,7 +33,7 @@ $lineData = $blame.lineData
 
 ### Get data for a specific line
 
-```
+```4d
 $lineData = $blame.data(5) 
 ```
 
