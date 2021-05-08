@@ -11,6 +11,8 @@ Parse `git blame -p` result into objects
 
 ## How to
 
+### From command output
+
 ```4d
 $blame:=blame($blameOut)
 ```
@@ -20,7 +22,7 @@ For instance `git blame -p 'Project/Sources/Classes/Blame.4dm'`
 
 > You could launch git command with `LAUNCH EXTERNAL PROCESS`
 
-### Get lines and commit data
+#### Get lines and commit data
 
 ```4d
 // Get the commit data object
@@ -31,13 +33,44 @@ $commitData = $blame.commitData
 $lineData = $blame.lineData
 ```
 
-### Get data for a specific line
+#### Get data for a specific line
 
 ```4d
 $lineData = $blame.data(5) 
 ```
 
 It's equivalient to `$lineData["5"]` merged with `$commitData[$lineData["5"].hash]`
+
+## From method path in current database
+
+```4d
+$blame:=blameMethod($methodPath) // for instance blameMethod(Current method path)
+```
+
+## Macro
+
+### Blame GUI
+
+This macro launch the native git gui blame graphical interface on current method.
+
+![git gui blame](gitgui.png)
+
+- https://git-scm.com/docs/git-gui
+- https://github.com/prati0100/git-gui/
+
+You need a recent git (>=2.31.1). 
+
+> On macOs to upgrade git you could use `brew install git` with [brew](https://brew.sh/)
+
+And if it is not enough install git gui
+
+> [download source](https://github.com/prati0100/git-gui/releases) and use `make` and `make install`
+
+### Limitation
+
+4D macro seems to not allow me to get selected line, so I cannot limit blame to selected lines
+
+> one way is to search selected text in all text but if code is duplicated in method this is not corret
 
 ## Acknowledgement
 
