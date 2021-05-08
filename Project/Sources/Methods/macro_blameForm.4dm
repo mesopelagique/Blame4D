@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 #DECLARE($methodPath : Text)
 var $data : Collection
 $data:=blameMethod($methodPath).toCollection()
