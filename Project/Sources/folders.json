@@ -1,7 +1,19 @@
 {
+	"compiler": {
+		"methods": [
+			"Compiler_Methods"
+		]
+	},
+	"macro": {
+		"methods": [
+			"macro_blame"
+		]
+	},
 	"test": {
 		"methods": [
-			"test_blame"
+			"test_blame",
+			"test_blameMethod",
+			"testSuite"
 		]
 	},
 	"trash": {}

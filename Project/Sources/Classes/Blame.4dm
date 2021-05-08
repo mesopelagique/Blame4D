@@ -18,6 +18,7 @@ Function data($line : Integer)->$data : Object
 Function _parseBlame($blame : Text)->$parsed : Boolean
 	$parsed:=False:C215
 	// Split up the original document into an array of lines
+	var $lines : Collection
 	$lines:=Split string:C1554($blame; "\n")
 	If ($lines.length>0)
 		
