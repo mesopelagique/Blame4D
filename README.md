@@ -7,7 +7,9 @@
 [![license][license-shield]][license-url]
 [![discord][discord-shield]][discord-url]
 
-Parse `git blame -p` result into objects
+Get `git blame` information for methods and classes.
+
+Launch the git gui by macro.
 
 ## How to
 
