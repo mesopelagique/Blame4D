@@ -51,6 +51,10 @@ $blame:=blameMethod($methodPath) // for instance blameMethod(Current method path
 
 ## Macro
 
+To install this component into your 4D, download it and move it manually to the `Components` folder of your 4D app or your database.
+
+or use [kaluza command line interface](https://mesopelagique.github.io/kaluza-cli/) and do `kaluza install -g mesopelagique/Blame4D`
+
 ### Blame GUI
 
 This macro launch the native git gui blame graphical interface on current method.
