@@ -51,7 +51,7 @@ $blame:=blameMethod($methodPath) // for instance blameMethod(Current method path
 
 ## Macro
 
-To install this component into your 4D, download it and move it manually to the `Components` folder of your 4D app or your database.
+To install this component into your 4D, download it, rename it with `.4dbase` extension and move it manually to the `Components` folder of your 4D app or into your database.
 
 or use [kaluza command line interface](https://mesopelagique.github.io/kaluza-cli/) and do `kaluza install -g mesopelagique/Blame4D`
 
@@ -68,15 +68,15 @@ You need a recent git (>=2.31.1).
 
 > On macOs to upgrade git you could use `brew install git` with [brew](https://brew.sh/)
 
-And if it is not enough install git gui
+And if it is not enough install git gui manually
 
-> [download source](https://github.com/prati0100/git-gui/releases) and use `make` and `make install`
+> [Download source](https://github.com/prati0100/git-gui/releases) and use `make` and `make install`
 
 ### Limitation
 
-4D macro seems to not allow me to get selected line, so I cannot limit blame to selected lines
+4D macro system seems to not allow me to get selected lines, so I cannot limit blame to selected lines.
 
-> one way is to search selected text in all text but if code is duplicated in method this is not corret
+> one way is to search selected code in all code but if some code are duplicated in the current method, this is not correct!
 
 ## Acknowledgement
 
