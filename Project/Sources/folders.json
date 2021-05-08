@@ -4,9 +4,15 @@
 			"Compiler_Methods"
 		]
 	},
+	"form": {
+		"forms": [
+			"BlameForm"
+		]
+	},
 	"macro": {
 		"methods": [
 			"macro_blame",
+			"macro_blameForm",
 			"macro_blameGui"
 		]
 	},

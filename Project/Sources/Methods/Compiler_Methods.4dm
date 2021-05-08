@@ -14,3 +14,6 @@ C_TEXT:C284(gitPath; $0)
 
 //macro_blameGui
 C_TEXT:C284(macro_blameGui; $1)
+
+//macro_blameForm
+C_TEXT:C284(macro_blameForm; $1)

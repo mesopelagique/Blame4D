@@ -5,5 +5,11 @@
   <macro in_menu="true" name="Blame GUI" type_ahead="false" version="2">
     <text>
       <method>macro_blameGui("<method_path/>")</method>
-    </text></macro>
+    </text>
+  </macro>
+  <macro in_menu="true" name="Blame Form" type_ahead="false" version="2">
+    <text>
+      <method>macro_blameForm("<method_path/>")</method>
+    </text>
+    </macro>
 </macros>

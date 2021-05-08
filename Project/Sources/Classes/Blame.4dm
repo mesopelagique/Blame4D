@@ -120,3 +120,11 @@ Function _parseCommitLine($lineArr : Collection)
 		Else 
 			// break
 	End case 
+	
+Function toCollection()->$collection : Collection
+	$collection:=OB Entries:C1720(This:C1470.lineData)
+	var $lineEntry : Object
+	For each ($lineEntry; $collection)
+		$lineEntry.value.commit:=This:C1470.commitData[$lineEntry.value.hash]
+	End for each 
+	
