@@ -6,7 +6,8 @@
 	},
 	"macro": {
 		"methods": [
-			"macro_blame"
+			"macro_blame",
+			"macro_blameGui"
 		]
 	},
 	"test": {
