@@ -130,6 +130,7 @@ Function toCollection()->$collection : Collection
 	
 Function toText()->$text : Text
 	$text:=""
+	var $collection : Collection
 	$collection:=OB Entries:C1720(This:C1470.lineData)
 	var $lineEntry : Object
 	// TODO sort by key if necessary

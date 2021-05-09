@@ -26,5 +26,11 @@
 			"testSuite"
 		]
 	},
+	"theme": {
+		"methods": [
+			"GetCurrentThemeFile",
+			"GetCurrentThemeName"
+		]
+	},
 	"trash": {}
 }

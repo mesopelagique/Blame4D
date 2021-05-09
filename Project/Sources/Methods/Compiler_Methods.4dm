@@ -17,3 +17,13 @@ C_TEXT:C284(macro_blameGui; $1)
 
 //macro_blameForm
 C_TEXT:C284(macro_blameForm; $1)
+
+//GetCurrentThemeName
+C_TEXT:C284(GetCurrentThemeName; $0)
+
+//hashcolor
+C_TEXT:C284(hashcolor; $0)
+C_TEXT:C284(hashcolor; $1)
+
+//GetCurrentThemeFile
+C_OBJECT:C1216(GetCurrentThemeFile; $0)
