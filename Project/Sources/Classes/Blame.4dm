@@ -128,3 +128,18 @@ Function toCollection()->$collection : Collection
 		$lineEntry.value.commit:=This:C1470.commitData[$lineEntry.value.hash]
 	End for each 
 	
+Function toText()->$text : Text
+	$text:=""
+	$collection:=OB Entries:C1720(This:C1470.lineData)
+	var $lineEntry : Object
+	// TODO sort by key if necessary
+	For each ($lineEntry; $collection)
+		If ($lineEntry.value.numLines=Null:C1517)
+			$text:=$text+"\n"  // same commit
+		Else 
+			$text:=$text+"\n━━━━━━\n"+String:C10(This:C1470.commitData[$lineEntry.value.hash].summary)
+		End if 
+	End for each 
+	
+	
+	

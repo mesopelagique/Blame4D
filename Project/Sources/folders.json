@@ -5,6 +5,9 @@
 		]
 	},
 	"form": {
+		"methods": [
+			"hashcolor"
+		],
 		"forms": [
 			"BlameForm"
 		]

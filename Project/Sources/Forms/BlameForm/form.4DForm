@@ -29,7 +29,6 @@
 		"onBoundVariableChange"
 	],
 	"windowTitle": "window title",
-	"destination": "detailScreen",
 	"pages": [
 		{
 			"objects": {}
@@ -38,10 +37,10 @@
 			"objects": {
 				"List Box": {
 					"type": "listbox",
-					"left": 45,
-					"top": 30,
-					"width": 1587,
-					"height": 804,
+					"left": 14,
+					"top": 9,
+					"width": 1830,
+					"height": 866,
 					"events": [
 						"onClick",
 						"onHeaderClick",
@@ -50,6 +49,12 @@
 					],
 					"listboxType": "collection",
 					"dataSource": "Form:C1466.blame",
+					"hideFocusRing": true,
+					"fill": "automatic",
+					"borderStyle": "none",
+					"hideExtraBlankRows": false,
+					"showHeaders": false,
+					"rowFillSource": "",
 					"columns": [
 						{
 							"header": {
@@ -73,19 +78,7 @@
 								"name": "Footer2"
 							},
 							"dataSource": "This:C1470.value.code",
-							"width": 654
-						},
-						{
-							"header": {
-								"name": "Header3",
-								"text": "Author"
-							},
-							"name": "Column3",
-							"footer": {
-								"name": "Footer3"
-							},
-							"dataSource": "This:C1470.value.commit.author+\" \"+This:C1470.value.commit.authorMail",
-							"width": 291
+							"width": 638
 						},
 						{
 							"header": {
@@ -97,15 +90,29 @@
 							"footer": {
 								"name": "Footer4"
 							},
-							"width": 610,
-							"dataSource": "This:C1470.value.commit.summary"
+							"width": 755,
+							"dataSource": "Choose:C955(This:C1470.value.numLines=Null:C1517; \"\"; This:C1470.value.commit.summary)",
+							"rowFillSource": "hashcolor(This:C1470.value.hash)"
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Author"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "Choose:C955(This:C1470.value.numLines=Null:C1517; \"\"; This:C1470.value.commit.author+\" \"+This:C1470.value.commit.authorMail)",
+							"width": 291,
+							"rowFillSource": "hashcolor(This:C1470.value.hash)"
 						}
 					]
 				}
 			}
 		}
 	],
-	"geometryStamp": 4,
+	"geometryStamp": 18,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
