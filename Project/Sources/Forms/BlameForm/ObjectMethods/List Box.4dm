@@ -23,13 +23,17 @@ Case of
 		GET MOUSE:C468($mouseX; $mouseY; $mouseZ)
 		LISTBOX GET CELL POSITION:C971(*; OBJECT Get name:C1087(Object current:K67:2); $mouseX; $mouseY; $col; $row)
 		
-		If ($row#0)
-			If (($row<Form:C1466.blame.length) & ($col=3))
-				OBJECT SET HELP TIP:C1181(*; OBJECT Get name:C1087(Object current:K67:2); String:C10(Form:C1466.blame[$row].value.commit.author)+" "+String:C10(Form:C1466.blame[$row].value.commit.authorMail))
-			Else 
-				OBJECT SET HELP TIP:C1181(*; OBJECT Get name:C1087(Object current:K67:2); "")
-			End if 
+		$tips:=""
+		If (($row#0) & ($row<Form:C1466.blame.length))
+			Case of 
+				: ($col=3)
+					$tips:=String:C10(Form:C1466.blame[$row].value.commit.author)+" "+String:C10(Form:C1466.blame[$row].value.commit.authorMail)
+				: ($col=4)
+					$tips:=String:C10(Form:C1466.blame[$row].value.hash)
+			End case 
+			
 		End if 
+		OBJECT SET HELP TIP:C1181(*; OBJECT Get name:C1087(Object current:K67:2); $tips)
 		
 	: (Form event code:C388=On Mouse Leave:K2:34)
 		SET DATABASE PARAMETER:C642(Tips delay:K37:80; 3)
