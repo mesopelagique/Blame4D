@@ -26,12 +26,12 @@ Case of
 		
 		var $tips : Text
 		$tips:=""
-		If (($row#0) & ($row<Form:C1466.blame.length))
+		If (($row#0) & ($row<=Form:C1466.blame.length))
 			Case of 
 				: ($col=3)
-					$tips:=String:C10(Form:C1466.blame[$row].value.commit.author)+" "+String:C10(Form:C1466.blame[$row].value.commit.authorMail)
+					$tips:=String:C10(Form:C1466.blame[$row-1].value.commit.author)+" "+String:C10(Form:C1466.blame[$row-1].value.commit.authorMail)
 				: ($col=4)
-					$tips:=String:C10(Form:C1466.blame[$row].value.hash)
+					$tips:=String:C10(Form:C1466.blame[$row-1].value.hash)
 			End case 
 			
 		End if 
