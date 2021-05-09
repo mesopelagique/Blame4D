@@ -28,7 +28,7 @@ Function _gravatar($prefix : Text)->$picture : Picture
 		Case of 
 			: (Length:C16(String:C10(This:C1470[$prefix+"Mail"]))=0)
 				// no mail
-			: (Position:C15("not.commit.yet"; String:C10(This:C1470[$prefix+"Mail"]))>0)
+			: (Position:C15("not.commit"; String:C10(This:C1470[$prefix+"Mail"]))>0)
 				// no mail
 			Else 
 				$url:=gravatarURL(This:C1470[$prefix+"Mail"])

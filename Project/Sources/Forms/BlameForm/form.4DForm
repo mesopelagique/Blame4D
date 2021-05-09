@@ -13,20 +13,9 @@
 	"bottomMargin": 20,
 	"events": [
 		"onLoad",
-		"onPageChange",
-		"onValidate",
 		"onClick",
-		"onDoubleClick",
 		"onOutsideCall",
-		"onBeginDragOver",
-		"onDragOver",
-		"onDrop",
-		"onAfterKeystroke",
-		"onMenuSelect",
-		"onPluginArea",
-		"onAfterEdit",
-		"onTimer",
-		"onBoundVariableChange"
+		"onDoubleClick"
 	],
 	"windowTitle": "Blame",
 	"pages": [
@@ -42,10 +31,10 @@
 					"width": 1830,
 					"height": 866,
 					"events": [
-						"onClick",
-						"onHeaderClick",
-						"onDataChange",
-						"onSelectionChange"
+						"onLoad",
+						"onMouseEnter",
+						"onMouseLeave",
+						"onMouseMove"
 					],
 					"listboxType": "collection",
 					"dataSource": "Form:C1466.blame",
@@ -53,8 +42,10 @@
 					"fill": "automatic",
 					"borderStyle": "none",
 					"hideExtraBlankRows": false,
-					"showHeaders": false,
+					"showHeaders": true,
 					"rowFillSource": "",
+					"showFooters": true,
+					"method": "ObjectMethods/List Box.4dm",
 					"columns": [
 						{
 							"header": {
@@ -66,7 +57,8 @@
 								"name": "Footer1"
 							},
 							"dataSource": "This:C1470.key",
-							"width": 61
+							"width": 61,
+							"dataSourceTypeHint": "text"
 						},
 						{
 							"header": {
@@ -79,20 +71,6 @@
 							},
 							"dataSource": "This:C1470.value.code",
 							"width": 638
-						},
-						{
-							"header": {
-								"name": "Header4",
-								"text": "Summary",
-								"dataSource": ""
-							},
-							"name": "Column4",
-							"footer": {
-								"name": "Footer4"
-							},
-							"width": 755,
-							"dataSource": "Choose:C955(This:C1470.value.numLines=Null:C1517; \"\"; This:C1470.value.commit.summary)",
-							"rowFillSource": "hashcolor(This:C1470.value.hash)"
 						},
 						{
 							"header": {
@@ -113,8 +91,22 @@
 						},
 						{
 							"header": {
+								"name": "Header4",
+								"text": "Summary",
+								"dataSource": ""
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"width": 755,
+							"dataSource": "Choose:C955(This:C1470.value.numLines=Null:C1517; \"\"; This:C1470.value.commit.summary)",
+							"rowFillSource": "hashcolor(This:C1470.value.hash)"
+						},
+						{
+							"header": {
 								"name": "Header5",
-								"text": "Header5"
+								"text": "Date"
 							},
 							"name": "Column5",
 							"footer": {
@@ -126,11 +118,25 @@
 							"dateFormat": "systemLong"
 						}
 					]
+				},
+				"Splitter": {
+					"type": "splitter",
+					"left": 1609,
+					"top": 16,
+					"width": 1,
+					"height": 1
+				},
+				"Splitter1": {
+					"type": "splitter",
+					"left": 1609,
+					"top": 16,
+					"width": 1,
+					"height": 1
 				}
 			}
 		}
 	],
-	"geometryStamp": 18,
+	"geometryStamp": 22,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
