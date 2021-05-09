@@ -24,6 +24,7 @@
 			"test_blame",
 			"test_blameMethod",
 			"test_gravatarURL",
+			"test_time",
 			"testSuite"
 		]
 	},
