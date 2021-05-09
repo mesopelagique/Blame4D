@@ -103,9 +103,27 @@
 							"footer": {
 								"name": "Footer3"
 							},
-							"dataSource": "Choose:C955(This:C1470.value.numLines=Null:C1517; \"\"; This:C1470.value.commit.author+\" \"+This:C1470.value.commit.authorMail)",
-							"width": 291,
-							"rowFillSource": "hashcolor(This:C1470.value.hash)"
+							"dataSource": "Choose:C955(This:C1470.value.numLines=Null:C1517; Null:C1517; This:C1470.value.commit.authorGravatar())",
+							"width": 20,
+							"rowFillSource": "hashcolor(This:C1470.value.hash)",
+							"dataSourceTypeHint": "picture",
+							"maxWidth": 20,
+							"minWidth": 20,
+							"pictureFormat": "proportionalTopLeft"
+						},
+						{
+							"header": {
+								"name": "Header5",
+								"text": "Header5"
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							},
+							"dataSource": "Choose:C955(This:C1470.value.numLines=Null:C1517; Null:C1517; This:C1470.value.commit.authorDate())",
+							"width": 256,
+							"dataSourceTypeHint": "text",
+							"dateFormat": "systemLong"
 						}
 					]
 				}

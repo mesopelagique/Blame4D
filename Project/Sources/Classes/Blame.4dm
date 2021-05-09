@@ -50,34 +50,24 @@ Function _parseBlame($blame : Text)->$parsed : Boolean
 							This:C1470.currentLineNumber:=$arrLine[2]
 							
 							// Setup the new lineData hash
-							This:C1470.lineData[$arrLine[2]]:=New object:C1471(\
+							This:C1470.lineData[This:C1470.currentLineNumber]:=New object:C1471(\
 								"code"; ""; \
 								"hash"; This:C1470.currentCommitHash; \
 								"originalLine"; Num:C11($arrLine[1]); \
-								"finalLine"; Num:C11($arrLine[2]))
+								"finalLine"; Num:C11(This:C1470.currentLineNumber))
 							If ($arrLine.length>3)
-								This:C1470.lineData[$arrLine[2]].numLines:=Num:C11($arrLine[3])-1
+								This:C1470.lineData[This:C1470.currentLineNumber].numLines:=Num:C11($arrLine[3])-1
 							End if 
 							
 							// Since the commit data (author, committer, summary, etc) only
 							// appear once in a porcelain output for every commit, we set
 							// it up once here and then expect that the next 8-11 lines of
 							// the file are dedicated to that data
-							If (This:C1470.commitData[$arrLine[0]]=Null:C1517)
+							If (This:C1470.commitData[This:C1470.currentCommitHash]=Null:C1517)
 								This:C1470._settingCommitData:=True:C214
-								This:C1470.commitData[$arrLine[0]]:=New object:C1471(\
-									"author"; ""; \
-									"authorMail"; ""; \
-									"authorTime"; ""; \
-									"authorTz"; ""; \
-									"committer"; ""; \
-									"committerMail"; ""; \
-									"committerTime"; ""; \
-									"committerTz"; ""; \
-									"summary"; ""; \
-									"previousHash"; ""; \
-									"filename"; "")
+								This:C1470.commitData[This:C1470.currentCommitHash]:=cs:C1710.CommitData.new()
 							End if 
+							This:C1470.lineData[This:C1470.currentLineNumber].commit:=This:C1470.commitData[This:C1470.currentCommitHash]
 						End if 
 					End if 
 			End case 
@@ -123,12 +113,8 @@ Function _parseCommitLine($lineArr : Collection)
 	
 Function toCollection()->$collection : Collection
 	$collection:=OB Entries:C1720(This:C1470.lineData)
-	var $lineEntry : Object
-	For each ($lineEntry; $collection)
-		$lineEntry.value.commit:=This:C1470.commitData[$lineEntry.value.hash]
-	End for each 
 	
-Function toText()->$text : Text
+Function _toText()->$text : Text
 	$text:=""
 	var $collection : Collection
 	$collection:=OB Entries:C1720(This:C1470.lineData)
@@ -138,7 +124,7 @@ Function toText()->$text : Text
 		If ($lineEntry.value.numLines=Null:C1517)
 			$text:=$text+"\n"  // same commit
 		Else 
-			$text:=$text+"\n━━━━━━\n"+String:C10(This:C1470.commitData[$lineEntry.value.hash].summary)
+			$text:=$text+"\n"+String:C10($lineEntry.value.commit.summary)
 		End if 
 	End for each 
 	

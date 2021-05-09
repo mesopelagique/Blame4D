@@ -23,6 +23,7 @@
 		"methods": [
 			"test_blame",
 			"test_blameMethod",
+			"test_gravatarURL",
 			"testSuite"
 		]
 	},

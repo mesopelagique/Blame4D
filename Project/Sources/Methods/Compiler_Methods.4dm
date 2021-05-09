@@ -27,3 +27,7 @@ C_TEXT:C284(hashcolor; $1)
 
 //GetCurrentThemeFile
 C_OBJECT:C1216(GetCurrentThemeFile; $0)
+
+//gravatarURL
+C_TEXT:C284(gravatarURL; $0)
+C_TEXT:C284(gravatarURL; $1)
