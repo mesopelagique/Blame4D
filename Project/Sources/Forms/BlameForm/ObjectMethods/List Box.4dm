@@ -20,9 +20,11 @@ Case of
 		
 	: (Form event code:C388=On Mouse Move:K2:35)
 		
+		var $mouseX; $mouseY; $mouseZ; $col; $row : Integer
 		GET MOUSE:C468($mouseX; $mouseY; $mouseZ)
 		LISTBOX GET CELL POSITION:C971(*; OBJECT Get name:C1087(Object current:K67:2); $mouseX; $mouseY; $col; $row)
 		
+		var $tips : Text
 		$tips:=""
 		If (($row#0) & ($row<Form:C1466.blame.length))
 			Case of 

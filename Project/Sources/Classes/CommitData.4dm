@@ -12,10 +12,10 @@ Class constructor
 	This:C1470.filename:=""
 	
 Function authorDate()->$date : Text  // Date if list box could display it correctly
-	$date:=String:C10(Date_FromEpoch(Num:C11(This:C1470.authorTime)))
+	$date:=cs:C1710.Time.new(Num:C11(This:C1470.authorTime)).toString()
 	
 Function committerDate()->$date : Text  // Date if list box could display it correctly
-	$date:=String:C10(Date_FromEpoch(Num:C11(This:C1470.committerTime)))
+	$date:=cs:C1710.Time.new(Num:C11(This:C1470.committerTime)).toString()
 	
 Function authorGravatar()->$picture : Picture
 	$picture:=This:C1470._gravatar("author")
@@ -31,9 +31,11 @@ Function _gravatar($prefix : Text)->$picture : Picture
 			: (Position:C15("not.commit"; String:C10(This:C1470[$prefix+"Mail"]))>0)
 				// no mail
 			Else 
+				var $url : Text
 				$url:=gravatarURL(This:C1470[$prefix+"Mail"])
+				var $code : Integer
 				var $pictureBlob : Blob
-				HTTP Get:C1157($url+"?s=20"; $pictureBlob)
+				$code:=HTTP Get:C1157($url+"?s=20"; $pictureBlob)
 				
 				BLOB TO PICTURE:C682($pictureBlob; $picture)
 				This:C1470["_"+$prefix+"Gravatar"]:=$picture
