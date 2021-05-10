@@ -46,6 +46,7 @@
 					"rowFillSource": "",
 					"showFooters": true,
 					"method": "ObjectMethods/List Box.4dm",
+					"horizontalLineStroke": "transparent",
 					"columns": [
 						{
 							"header": {
