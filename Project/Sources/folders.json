@@ -10,6 +10,11 @@
 		],
 		"forms": [
 			"BlameForm"
+		],
+		"classes": [
+			"BlameForm",
+			"ListBox",
+			"Object"
 		]
 	},
 	"macro": {
@@ -30,6 +35,7 @@
 	},
 	"theme": {
 		"methods": [
+			"GetCurrentTheme",
 			"GetCurrentThemeFile",
 			"GetCurrentThemeName"
 		]

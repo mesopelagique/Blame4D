@@ -35,3 +35,6 @@ C_TEXT:C284(gravatarURL; $1)
 //fileForMethod
 C_TEXT:C284(fileForMethod; $0)
 C_TEXT:C284(fileForMethod; $1)
+
+//GetCurrentTheme
+C_OBJECT:C1216(GetCurrentTheme; $0)
