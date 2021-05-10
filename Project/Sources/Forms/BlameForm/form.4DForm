@@ -32,6 +32,7 @@
 					"height": 866,
 					"events": [
 						"onLoad",
+						"onSelectionChange",
 						"onMouseEnter",
 						"onMouseLeave",
 						"onMouseMove"
@@ -52,6 +53,7 @@
 					"scrollbarHorizontal": "automatic",
 					"scrollbarVertical": "automatic",
 					"sortable": false,
+					"selectedItemsSource": "Form:C1466.listBox.selected",
 					"columns": [
 						{
 							"header": {
