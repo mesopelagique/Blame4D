@@ -78,9 +78,11 @@
 							"footer": {
 								"name": "Footer2"
 							},
-							"dataSource": "This:C1470.value.code",
+							"dataSource": "This:C1470.value.codeStyled",
 							"width": 638,
-							"minWidth": 400
+							"minWidth": 400,
+							"styledText": true,
+							"contextMenu": "none"
 						},
 						{
 							"header": {

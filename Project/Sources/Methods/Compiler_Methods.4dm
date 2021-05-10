@@ -38,3 +38,8 @@ C_TEXT:C284(fileForMethod; $1)
 
 //GetCurrentTheme
 C_OBJECT:C1216(GetCurrentTheme; $0)
+
+//styleCode
+C_TEXT:C284(styleCode; $0)
+C_TEXT:C284(styleCode; $1)
+C_OBJECT:C1216(styleCode; $2)

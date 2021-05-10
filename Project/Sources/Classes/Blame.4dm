@@ -22,6 +22,9 @@ Function _parseBlame($blame : Text)->$parsed : Boolean
 	$lines:=Split string:C1554($blame; "\n")
 	If ($lines.length>0)
 		
+		var $theme : Object
+		$theme:=GetCurrentTheme
+		
 		// Go through each line
 		var $i : Integer
 		For ($i; 0; $lines.length-1; 1)
@@ -32,6 +35,7 @@ Function _parseBlame($blame : Text)->$parsed : Boolean
 					
 					// The first tab is an addition made by git, so get rid of it
 					This:C1470.lineData[This:C1470.currentLineNumber].code:=Substring:C12($lines[$i]; 2)
+					This:C1470.lineData[This:C1470.currentLineNumber].codeStyled:=styleCode(This:C1470.lineData[This:C1470.currentLineNumber].code; $theme)
 					This:C1470._settingCommitData:=False:C215
 					This:C1470.currentCommitHash:=""
 				Else 
