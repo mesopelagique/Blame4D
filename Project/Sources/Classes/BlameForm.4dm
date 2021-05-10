@@ -41,7 +41,7 @@ Function getHelpTip($rowData : Object; $col : Integer)->$tip : Text
 		: ($col=3)
 			$tip:=String:C10($rowData.value.commit.author)+" "+String:C10($rowData.value.commit.authorMail)
 		: ($col=4)
-			$tip:=String:C10($rowData.value.hash)
+			$tip:=String:C10($rowData.value.hash)+"\n"+String:C10($rowData.value.commit.summary)
 		Else 
 			$tip:=""
 	End case 
