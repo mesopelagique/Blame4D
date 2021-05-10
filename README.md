@@ -85,13 +85,11 @@ This macro launch the a 4D form with blame result on current method.
 
 ![blame form](Documentation/blameform.png)
 
-This form have no all functionnality of git blame gui, but do the job for most case.
+This form have not all functionnalities of `git blame gui`, but this do the job for most cases.
 
 ### Limitation
 
 4D macro system seems to not allow me to get selected lines, so I cannot limit blame to selected lines.
-
-> one way is to search selected code in all code but if some code are duplicated in the current method, this is not correct!
 
 ## Acknowledgement
 
