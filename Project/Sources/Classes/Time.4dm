@@ -8,6 +8,7 @@ Class constructor($epoch : Real)
 		var $date : Date
 		$date:=!1970-01-01!+$days
 		
+		var $timeStamp : Text
 		$timeStamp:=String:C10($date; ISO date:K1:8; Time:C179(Time string:C180($seconds)))+"Z"
 		This:C1470.date:=Date:C102($timeStamp)
 		This:C1470.time:=Time:C179($timeStamp)
