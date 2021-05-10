@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 #DECLARE($methodPath : Text; $lines : Text)->$blame : Object
 
 var $file : Text
