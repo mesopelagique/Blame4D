@@ -18,6 +18,7 @@ Launch the git gui by macro.
 ```4d
 $blame:=blame($blameOut)
 ```
+
 with `$blameOut` the result of the git blame operation using -p (porcelain) option.
 
 For instance `git blame -p 'Project/Sources/Classes/Blame.4dm'`
@@ -49,7 +50,7 @@ It's equivalient to `$lineData["5"]` merged with `$commitData[$lineData["5"].has
 $blame:=blameMethod($methodPath) // for instance blameMethod(Current method path)
 ```
 
-## Install component 
+## Install component
 
 To install this component into your 4D, download it, rename it with `.4dbase` extension and move it manually to the `Components` folder of your 4D app or into your database.
 
@@ -59,30 +60,30 @@ or use [kaluza command line interface](https://mesopelagique.github.io/kaluza-cl
 
 This component add two macro to display blame result on current method or class.
 
-![menu macro](menumacro.png)
+![menu macro](Documentation/menumacro.png)
 
 ### Blame GUI
 
 This macro launch the native git gui blame graphical interface on current method.
 
-![git gui blame](gitgui.png)
+![git gui blame](Documentation/gitgui.png)
 
 - https://git-scm.com/docs/git-gui
 - https://github.com/prati0100/git-gui/
 
-You need a recent git (>=2.31.1). 
+You need a recent git (>=2.31.1).
 
 > On macOs to upgrade git you could use `brew install git` with [brew](https://brew.sh/)
 
 And if it is not enough install git gui manually
 
-> [Download source](https://github.com/prati0100/git-gui/releases) and use `make` and `make install`
+> [Download source](https://github.com/prati0100/git-gui/releases) then use `make` and `make install`.
 
 ### Blame Form
 
 This macro launch the a 4D form with blame result on current method.
 
-![blame form](blameform.png)
+![blame form](Documentation/blameform.png)
 
 This form have no all functionnality of git blame gui, but do the job for most case.
 
