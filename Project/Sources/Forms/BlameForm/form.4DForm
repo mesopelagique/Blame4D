@@ -44,9 +44,14 @@
 					"hideExtraBlankRows": false,
 					"showHeaders": true,
 					"rowFillSource": "",
-					"showFooters": true,
+					"showFooters": false,
 					"method": "ObjectMethods/List Box.4dm",
 					"horizontalLineStroke": "transparent",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"sortable": false,
 					"columns": [
 						{
 							"header": {
@@ -59,7 +64,8 @@
 							},
 							"dataSource": "This:C1470.key",
 							"width": 61,
-							"dataSourceTypeHint": "text"
+							"dataSourceTypeHint": "text",
+							"minWidth": 30
 						},
 						{
 							"header": {
@@ -71,7 +77,8 @@
 								"name": "Footer2"
 							},
 							"dataSource": "This:C1470.value.code",
-							"width": 638
+							"width": 638,
+							"minWidth": 400
 						},
 						{
 							"header": {
@@ -102,7 +109,8 @@
 							},
 							"width": 755,
 							"dataSource": "Choose:C955(This:C1470.value.numLines=Null:C1517; \"\"; This:C1470.value.commit.summary)",
-							"rowFillSource": "hashcolor(This:C1470.value.hash)"
+							"rowFillSource": "hashcolor(This:C1470.value.hash)",
+							"minWidth": 300
 						},
 						{
 							"header": {
@@ -116,7 +124,9 @@
 							"dataSource": "Choose:C955(This:C1470.value.numLines=Null:C1517; Null:C1517; This:C1470.value.commit.authorDate())",
 							"width": 256,
 							"dataSourceTypeHint": "text",
-							"dateFormat": "systemLong"
+							"dateFormat": "systemLong",
+							"minWidth": 256,
+							"maxWidth": 256
 						}
 					]
 				},
@@ -137,7 +147,7 @@
 			}
 		}
 	],
-	"geometryStamp": 22,
+	"geometryStamp": 24,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
