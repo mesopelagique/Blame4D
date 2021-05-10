@@ -49,11 +49,17 @@ It's equivalient to `$lineData["5"]` merged with `$commitData[$lineData["5"].has
 $blame:=blameMethod($methodPath) // for instance blameMethod(Current method path)
 ```
 
-## Macro
+## Install component 
 
 To install this component into your 4D, download it, rename it with `.4dbase` extension and move it manually to the `Components` folder of your 4D app or into your database.
 
 or use [kaluza command line interface](https://mesopelagique.github.io/kaluza-cli/) and do `kaluza install -g mesopelagique/Blame4D`
+
+## Macro
+
+This component add two macro to display blame result on current method or class.
+
+![menu macro](menumacro.png)
 
 ### Blame GUI
 
@@ -71,6 +77,14 @@ You need a recent git (>=2.31.1).
 And if it is not enough install git gui manually
 
 > [Download source](https://github.com/prati0100/git-gui/releases) and use `make` and `make install`
+
+### Blame Form
+
+This macro launch the a 4D form with blame result on current method.
+
+![blame form](blameform.png)
+
+This form have no all functionnality of git blame gui, but do the job for most case.
 
 ### Limitation
 
