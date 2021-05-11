@@ -4,12 +4,16 @@
   <macro name="-">
   <text> </text>
   </macro>
-  <macro in_menu="true" name="Blame GUI" type_ahead="false" version="2">
+  <macro in_menu="true" name="Blame (&lt;B" type_ahead="false" version="2">
+    <text>  
+    </text>
+  </macro>
+  <macro in_menu="true" name="  GUI" type_ahead="false" version="2">
     <text>
       <method>macro_blameGui("<method_path/>")</method>
     </text>
   </macro>
-  <macro in_menu="true" name="Blame Form" type_ahead="false" version="2">
+  <macro in_menu="true" name="  Form" type_ahead="false" version="2">
     <text>
       <method>macro_blameForm("<method_path/>")</method>
     </text>
