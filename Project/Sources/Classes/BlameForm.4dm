@@ -30,7 +30,11 @@ Function handle()
 	
 Function setFontFromTheme()
 	var $theme : Object
+	var $onErr : Text
+	$onErr:=Method called on error:C704
+	ON ERR CALL:C155("ignoreError")
 	$theme:=GetCurrentTheme
+	ON ERR CALL:C155($onErr)
 	If ($theme#Null:C1517)
 		Form:C1466.listBox.setFont($theme.fontName)
 		Form:C1466.listBox.setFontSize(Num:C11($theme.fontSize))
