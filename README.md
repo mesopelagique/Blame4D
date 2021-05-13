@@ -3,6 +3,7 @@
 [![language][code-shield]][code-url]
 [![language-top][code-top]][code-url]
 ![code-size][code-size]
+[![build](https://github.com/mesopelagique/Blame4D/actions/workflows/build.yml/badge.svg)](https://github.com/mesopelagique/Blame4D/actions/workflows/build.yml)
 [![release][release-shield]][release-url]
 [![license][license-shield]][license-url]
 [![discord][discord-shield]][discord-url]
