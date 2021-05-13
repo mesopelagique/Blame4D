@@ -8,11 +8,52 @@
 [![license][license-shield]][license-url]
 [![discord][discord-shield]][discord-url]
 
-Get `git blame` information for methods and classes.
+Get `git blame` information for methods and classes, by code or by launching a graphical interface on current file in method editor using macro.
 
-Launch the git gui by macro.
+## Install component
 
-## How to
+To install this component into your 4D, download it, rename it with `.4dbase` extension and move it manually to the `Components` folder of your 4D app or into your database.
+
+or use [kaluza command line interface](https://mesopelagique.github.io/kaluza-cli/) and do `kaluza install -g mesopelagique/Blame4D`
+
+or v19 component [DeployComponent](https://github.com/mesopelagique/DeployComponent)
+
+## Macro
+
+This component add two macro to display blame result on current method or class.
+
+![menu macro](Documentation/menumacro.png)
+
+### Blame GUI
+
+This macro launch the native git gui blame graphical interface on current method.
+
+![git gui blame](Documentation/gitgui.png)
+
+- https://git-scm.com/docs/git-gui
+- https://github.com/prati0100/git-gui/
+
+You need a recent git (>=2.31.1).
+
+> On macOs to upgrade git you could use `brew install git` with [brew](https://brew.sh/)
+
+And if it is not enough install git gui manually
+
+> [Download source](https://github.com/prati0100/git-gui/releases) then use `make` and `make install`.
+
+### Blame Form
+
+This macro launch the a 4D form with blame result on current method.
+
+![blame form](Documentation/blameform.png)
+
+This form have not all functionnalities of `git blame gui`, but this do the job for most cases.
+
+### Limitation
+
+4D macro system seems to not allow me to get selected lines, so I cannot limit blame to selected lines.
+
+## How to by code
 
 ### From command output
 
@@ -51,50 +92,9 @@ It's equivalient to `$lineData["5"]` merged with `$commitData[$lineData["5"].has
 $blame:=blameMethod($methodPath) // for instance blameMethod(Current method path)
 ```
 
-## Install component
-
-To install this component into your 4D, download it, rename it with `.4dbase` extension and move it manually to the `Components` folder of your 4D app or into your database.
-
-or use [kaluza command line interface](https://mesopelagique.github.io/kaluza-cli/) and do `kaluza install -g mesopelagique/Blame4D`
-
-## Macro
-
-This component add two macro to display blame result on current method or class.
-
-![menu macro](Documentation/menumacro.png)
-
-### Blame GUI
-
-This macro launch the native git gui blame graphical interface on current method.
-
-![git gui blame](Documentation/gitgui.png)
-
-- https://git-scm.com/docs/git-gui
-- https://github.com/prati0100/git-gui/
-
-You need a recent git (>=2.31.1).
-
-> On macOs to upgrade git you could use `brew install git` with [brew](https://brew.sh/)
-
-And if it is not enough install git gui manually
-
-> [Download source](https://github.com/prati0100/git-gui/releases) then use `make` and `make install`.
-
-### Blame Form
-
-This macro launch the a 4D form with blame result on current method.
-
-![blame form](Documentation/blameform.png)
-
-This form have not all functionnalities of `git blame gui`, but this do the job for most cases.
-
-### Limitation
-
-4D macro system seems to not allow me to get selected lines, so I cannot limit blame to selected lines.
-
 ## Acknowledgement
 
-Code converted from Javascript project [blamejs](https://github.com/mnmtanish/blamejs)   with [Mesopotamia](https://github.com/mesopelagique/Mesopotamia)
+Code to parse blame output converted from Javascript project [blamejs](https://github.com/mnmtanish/blamejs) with [Mesopotamia](https://github.com/mesopelagique/Mesopotamia)
 
 ## Other components
 
