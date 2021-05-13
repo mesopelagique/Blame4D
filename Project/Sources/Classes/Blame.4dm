@@ -28,7 +28,9 @@ Function _parseBlame($blame : Text)->$parsed : Boolean
 			Case of 
 				: (Length:C16($lines[$i])=0)
 					// ignore
+					//%W-533.1
 				: ($lines[$i][[1]]="\t")
+					//%W+533.1
 					
 					// The first tab is an addition made by git, so get rid of it
 					This:C1470.lineData[This:C1470.currentLineNumber].code:=Substring:C12($lines[$i]; 2)
