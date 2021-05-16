@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true}
 // WIP
 C_TEXT:C284($1)
 

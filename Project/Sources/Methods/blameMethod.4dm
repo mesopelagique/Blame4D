@@ -1,4 +1,4 @@
-//%attributes = {"shared":true}
+//%attributes = {"invisible":true,"shared":true}
 #DECLARE($methodPath : Text; $lines : Text)->$blame : Object
 
 var $file : Text

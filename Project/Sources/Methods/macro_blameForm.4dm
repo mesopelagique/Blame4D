@@ -1,4 +1,4 @@
-//%attributes = {"shared":true}
+//%attributes = {"invisible":true,"shared":true}
 #DECLARE($methodPath : Text)
 var $data : Collection
 $data:=blameMethod($methodPath).toCollection()
