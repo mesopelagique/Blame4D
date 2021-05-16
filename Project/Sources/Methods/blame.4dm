@@ -1,3 +1,3 @@
-//%attributes = {"shared":true,"preemptive":"capable"}
+//%attributes = {"invisible":true,"shared":true,"preemptive":"capable"}
 #DECLARE($text : Text)->$blame : Object
 $blame:=cs:C1710.Blame.new($text)
