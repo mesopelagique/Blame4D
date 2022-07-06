@@ -36,6 +36,7 @@ This macro launch the native git gui blame graphical interface on current method
 You need a recent git (>=2.31.1).
 
 > On macOs to upgrade git you could use `brew install git` with [brew](https://brew.sh/)
+> For git gui: `brew install git-gui`
 
 And if it is not enough install git gui manually
 
