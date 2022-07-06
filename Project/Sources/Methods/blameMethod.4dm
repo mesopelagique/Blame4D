@@ -19,7 +19,7 @@ End if
 // see https://git-scm.com/docs/git-blame
 SET ENVIRONMENT VARIABLE:C812("_4D_OPTION_CURRENT_DIRECTORY"; Folder:C1567(fk database folder:K87:14; *).platformPath)
 var $cmd; $in; $out; $err : Text
-$cmd:=gitGuiPath()+" blame"+$options+" -p '"+$file+"'"
+$cmd:=gitPath()+" blame"+$options+" -p '"+$file+"'"
 LAUNCH EXTERNAL PROCESS:C811($cmd; $in; $out; $err)
 
 $blame:=blame($out)

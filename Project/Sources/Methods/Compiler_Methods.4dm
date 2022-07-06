@@ -12,6 +12,9 @@ C_TEXT:C284(blameMethod; $2)
 //gitPath
 C_TEXT:C284(gitPath; $0)
 
+//gitGuiPath
+C_TEXT:C284(gitGuiPath; $0)
+
 //macro_blameGui
 C_TEXT:C284(macro_blameGui; $1)
 
