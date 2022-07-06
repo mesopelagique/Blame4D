@@ -28,19 +28,12 @@ This component add two macro to display blame result on current method or class.
 
 This macro launch the native git gui blame graphical interface on current method.
 
-![git gui blame](Documentation/gitgui.png)
+![git-gui blame](Documentation/gitgui.png)
 
 - https://git-scm.com/docs/git-gui
 - https://github.com/prati0100/git-gui/
 
-You need a recent git (>=2.31.1).
-
-> On macOs to upgrade git you could use `brew install git` with [brew](https://brew.sh/)
-> For git gui: `brew install git-gui`
-
-And if it is not enough install git gui manually
-
-> [Download source](https://github.com/prati0100/git-gui/releases) then use `make` and `make install`.
+> On macOs to upgrade git you could use `brew install git-gui` with [brew](https://brew.sh/)
 
 ### Blame Form
 

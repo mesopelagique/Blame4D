@@ -42,7 +42,7 @@ Function _parseBlame($blame : Text)->$parsed : Boolean
 					$arrLine:=Split string:C1554($lines[$i]; " ")
 					// If we are in the process of collecting data about a commit summary
 					If (This:C1470._settingCommitData)
-						This:C1470._parseCommitLine($arrLine); 
+						This:C1470._parseCommitLine($arrLine)
 					Else 
 						// 40 == the length of an Sha1
 						// This is really only an added check, we should be guaranteed
