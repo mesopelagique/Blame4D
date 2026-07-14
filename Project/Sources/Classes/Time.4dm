@@ -1,3 +1,6 @@
+property date : Date
+property time : Time
+
 Class constructor($epoch : Real)
 	If (Count parameters:C259>0)
 		var $seconds : Integer

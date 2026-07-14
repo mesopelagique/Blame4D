@@ -1,16 +1,5 @@
-Class constructor
-	This:C1470.author:=""
-	This:C1470.authorMail:=""
-	This:C1470.authorTime:=""
-	This:C1470.authorTz:=""
-	This:C1470.committer:=""
-	This:C1470.committerMail:=""
-	This:C1470.committerTime:=""
-	This:C1470.committerTz:=""
-	This:C1470.summary:=""
-	This:C1470.previousHash:=""
-	This:C1470.filename:=""
-	
+property author; authorMail; authorTime; authorTz; committer; committerMail; committerTime; committerTz; summary; previous; previousHash; filename : Text
+
 Function authorDate()->$date : Text  // Date if list box could display it correctly
 	$date:=cs:C1710.Time.new(Num:C11(This:C1470.authorTime)).toString()
 	

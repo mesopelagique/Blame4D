@@ -1,3 +1,8 @@
+property commitData; lineData : Object
+property _settingCommitData : Boolean
+property currentCommitHash : Text
+property currentLineNumber : Integer
+
 Class constructor($blame : Text)
 	This:C1470.commitData:=New object:C1471()
 	This:C1470.lineData:=New object:C1471()

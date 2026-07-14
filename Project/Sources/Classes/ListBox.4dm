@@ -1,5 +1,11 @@
 Class extends Object
 
+property model : Collection
+property getHelpTip : 4D.Function
+
+Class constructor($objectName : Text)
+	Super:C1706($objectName)
+
 Function selectRows($rows : Variant; $action : Integer)
 	LISTBOX SELECT ROWS:C1715(*; This:C1470.name; $rows; $action)
 	
@@ -24,7 +30,7 @@ Function helpTip()->$handled : Boolean
 			var $helpTip : Text
 			// Implemented for collection model (we need interface for generic model)
 			If (($position.row#0) & ($position.row<=This:C1470.model.length))
-				$helpTip:=This:C1470.getHelpTip(This:C1470.model[$position.row-1]/*row data*/; $position.column)
+				$helpTip:=This:C1470.getHelpTip.call(This:C1470; This:C1470.model[$position.row-1]/*row data*/; $position.column)
 			Else 
 				$helpTip:=""
 			End if 

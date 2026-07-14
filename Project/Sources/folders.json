@@ -1,9 +1,4 @@
 {
-	"compiler": {
-		"methods": [
-			"Compiler_Methods"
-		]
-	},
 	"form": {
 		"methods": [
 			"hashcolor"

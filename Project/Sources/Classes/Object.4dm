@@ -1,3 +1,5 @@
+property name : Text
+
 Class constructor($objectName : Text)
 	This:C1470.name:=$objectName
 	
