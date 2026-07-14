@@ -78,7 +78,9 @@
 							"footer": {
 								"name": "Footer2"
 							},
-							"dataSource": "This:C1470.value.code",
+							"dataSource": "highlight4D(This:C1470.value.code)",
+							"styledText": true,
+							"dataSourceTypeHint": "text",
 							"width": 638,
 							"minWidth": 400
 						},
