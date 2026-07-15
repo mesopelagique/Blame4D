@@ -32,6 +32,7 @@
 					"height": 866,
 					"events": [
 						"onLoad",
+						"onClick",
 						"onSelectionChange",
 						"onMouseEnter",
 						"onMouseLeave",
