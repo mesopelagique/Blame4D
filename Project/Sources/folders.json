@@ -12,6 +12,11 @@
 			"Object"
 		]
 	},
+	"git": {
+		"classes": [
+			"Git"
+		]
+	},
 	"macro": {
 		"methods": [
 			"macro_blame",

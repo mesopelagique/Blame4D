@@ -13,10 +13,11 @@ Function handle()
 
 			Form:C1466.listBox.model:=Form:C1466.blame
 			Form:C1466.listBox.getHelpTip:=This:C1470.getHelpTip
-			This:C1470.remoteURL:=String:C10(Try(gitRemoteURL))
+			This:C1470.remoteURL:=String:C10(Try(cs:C1710.Git.me.remoteURL))
 
 		: (Form event code:C388=On Clicked:K2:4)
 			If (Contextual click)
+				Form:C1466.listBox.deselectAll()  // a right-click clears any selection
 				This:C1470.contextualMenu()
 			End if
 
@@ -91,10 +92,10 @@ Function contextualMenu()
 	var $menu : Text
 	$menu:="Copy code;Copy author;Copy SHA-1"
 	var $url : Text
-	$url:=commitURL(This:C1470.remoteURL; $hash)
+	$url:=cs:C1710.Git.me.commitURL(This:C1470.remoteURL; $hash)
 	var $openIndex : Integer
 	If (Length:C16($url)>0)
-		$menu:=$menu+";(-;Open commit on "+((Position:C15("github"; This:C1470.remoteURL)>0) ? "GitHub" : "GitLab")
+		$menu:=$menu+";(-;Open commit on "+cs:C1710.Git.me.hostOf(This:C1470.remoteURL)
 		$openIndex:=5  // separators count in Pop up menu numbering
 	End if
 
@@ -124,6 +125,6 @@ Function contextualMenu()
 
 Function initTestData
 	If (Form:C1466.blame=Null:C1517)
-		Form:C1466.blame:=blameMethod("[class]/Blame").toCollection()  // test data
+		Form:C1466.blame:=cs:C1710.Git.me.blameMethod("[class]/Blame").toCollection()  // test data
 	End if
 	

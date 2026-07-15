@@ -8,6 +8,7 @@ property keywords : Collection
 property types : Collection
 property plainColor : Text
 property backColor : Text
+property selectionColor : Text
 property fontName : Text
 property fontSize : Integer
 
@@ -37,6 +38,7 @@ Function load($theme : Object)
 
 	This.plainColor:=This._color($t4d.plain_text; "#000000")
 	This.backColor:=This._color($other.back_color; "#FFFFFF")
+	This.selectionColor:=This._color($other.selection_back_color; "#A5D4EA")  // softer than the system accent
 	This.fontName:=String($theme.fontName)
 	This.fontSize:=Num($theme.fontSize)
 

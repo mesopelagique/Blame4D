@@ -8,6 +8,9 @@ Class constructor($objectName : Text)
 
 Function selectRows($rows : Variant; $action : Integer)
 	LISTBOX SELECT ROWS:C1715(*; This:C1470.name; $rows; $action)
+
+Function deselectAll()
+	This:C1470.selectRows([]; lk replace selection:K53:1)
 	
 Function getMouseOverCellPosition()->$position : Object
 	var $mouseX; $mouseY; $mouseZ : Integer

@@ -1,6 +1,6 @@
 //%attributes = {}
 var $blame : Object
-$blame:=blameMethod(Current method path:C1201)
+$blame:=cs:C1710.Git.me.blameMethod(Current method path:C1201)
 
 ASSERT:C1129(Not:C34(OB Is empty:C1297($blame.lineData)); "no line data")
 ASSERT:C1129(Not:C34(OB Is empty:C1297($blame.commitData)); "no commit data")

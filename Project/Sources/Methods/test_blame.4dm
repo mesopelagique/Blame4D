@@ -3,13 +3,13 @@ var $file : Text
 $file:="Project/Sources/Classes/Blame.4dm"
 
 // see https://git-scm.com/docs/git-blame
-$cmd:=gitGuiPath+" blame '"+$file+"'"
+$cmd:=cs:C1710.Git.me.guiPath+" blame '"+$file+"'"
 SET ENVIRONMENT VARIABLE:C812("_4D_OPTION_CURRENT_DIRECTORY"; Folder:C1567(fk database folder:K87:14).platformPath)
 var $cmd; $in; $out; $err : Text
 LAUNCH EXTERNAL PROCESS:C811($cmd; $in; $out; $err)
 
 var $blame : Object
-$blame:=blame($out)
+$blame:=cs:C1710.Git.me.blame($out)
 
 ASSERT:C1129(Not:C34(OB Is empty:C1297($blame.lineData)); "no line data")
 ASSERT:C1129(Not:C34(OB Is empty:C1297($blame.commitData)); "no commit data")

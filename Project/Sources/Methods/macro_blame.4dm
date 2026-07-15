@@ -3,13 +3,12 @@
 #DECLARE($method : Text)
 
 
-var $line:="5"  // XXX need line from macro selection
-var $lines:=String:C10($line)+",+1"
+var $line : Integer:=5  // XXX need line from macro selection
 
-var $blame:=blameMethod($method)
+var $blame:=cs:C1710.Git.me.blameMethod($method)
 If ($blame=Null:C1517)
 	ALERT:C41("No blame data")
-Else 
+Else
 	var $data : Object:=$blame.data($line)
 	ALERT:C41(JSON Stringify:C1217($data; *))  // TODO make a better interface, with lisbot
 End if 
